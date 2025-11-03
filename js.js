@@ -1,9 +1,17 @@
-// Store a value in local storage
-localStorage.setItem("username", "Toju");
-//Retrieve it
-let name = localStorage.getItem("username");
-console.log(name); // Toju
-// Remove one item
-localStorage.removeItem("username");
-// Clear all items
-localStorage.clear();
+// Use JSON.stringify() to store objects in local storage
+
+let user = { name: "Toju", age: 25 };
+
+localStorage.setItem("user", JSON.stringify(user));
+
+let getUserItem = function () {
+    return JSON.parse(localStorage.getItem("user"));
+}
+
+for (const key in getUserItem()) {
+    let p = document.createElement("p");
+
+    p.textContent = `${key}: ${getUserItem()[key]}`;
+
+    document.body.appendChild(p);
+}
