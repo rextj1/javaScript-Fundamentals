@@ -1,3 +1,4 @@
+// Initialize count from localStorage or set to 0 if not present
 let count = localStorage.getItem('count') ? parseInt(localStorage.getItem('count')) : 0;
 
 let DesplayCount = document.getElementById('count');
