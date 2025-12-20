@@ -1,0 +1,99 @@
+:root{
+  --bg: #f7f7fb;
+  --card: #ffffff;
+  --text: #222;
+  --muted: #666;
+  --accent: #2463ff;
+  --danger: #d9534f;
+  --shadow: rgba(0,0,0,0.06);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  min-height:100vh;
+  padding:24px;
+}
+
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:18px;
+}
+.top h1{margin:0;font-size:20px}
+.controls{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+input[type="search"], input[type="text"], select {
+  padding:8px 10px;
+  border-radius:8px;
+  border:1px solid #e0e0e6;
+  background:var(--card);
+  outline:none;
+  min-width:160px;
+}
+
+button{
+  padding:8px 12px;
+  border-radius:8px;
+  border:none;
+  background:var(--accent);
+  color:white;
+  cursor:pointer;
+}
+button.secondary {
+  background: #6c757d;
+}
+
+main{display:grid;grid-template-columns:360px 1fr;gap:20px;align-items:start}
+.form-section{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 18px var(--shadow)}
+.students{display:flex;flex-direction:column;gap:8px}
+
+.student-card{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px;
+  background:var(--card);
+  border-radius:8px;
+  box-shadow:0 4px 10px var(--shadow);
+  border:1px solid #eee;
+}
+.student-left{display:flex;align-items:center;gap:12px}
+.avatar{
+  width:44px;height:44px;border-radius:8px;background:#eee;display:inline-flex;align-items:center;justify-content:center;font-weight:700;color:#777
+}
+.student-meta{display:flex;flex-direction:column}
+.student-meta .name{font-weight:600}
+.student-meta .course{font-size:13px;color:var(--muted)}
+
+.actions{display:flex;gap:8px;align-items:center}
+.icon-btn{
+  border:none;padding:6px 8px;border-radius:8px;background:#fafafa;cursor:pointer;border:1px solid #eee
+}
+.icon-btn.delete{color:var(--danger);border-color:#f5cccc}
+.icon-btn.edit{color:var(--accent);border-color:#dbe8ff}
+
+.message{margin-top:8px;color:var(--muted);font-size:13px}
+
+/* hidden helper */
+.hidden{display:none}
+
+/* Dark mode */
+body.dark{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --text:#e6eef8;
+  --muted:#9fb0d0;
+  --accent:#57a1ff;
+  --shadow: rgba(0,0,0,0.6);
+  background:linear-gradient(180deg,#071025 0%, #081428 100%);
+}
