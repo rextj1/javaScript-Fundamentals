@@ -18,7 +18,7 @@ console.log(acctBal.deposit(50));
 console.log(acctBal.withdrawal(30));
 
 // counter example
-function makeClickCounter(buttonId) {
+function makeClickCounter() {
     let count = 0;
     let button = document.createElement('button');
     button.textContent = 'Click Me'
@@ -29,6 +29,6 @@ function makeClickCounter(buttonId) {
     document.body.append(button);
 }
 
-makeClickCounter("btn1");
+makeClickCounter();
 
 
